@@ -19,32 +19,52 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzu-4i-tB0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="microphone"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccg-gU-Tj1"/>
+                                </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJG-3J-IOX">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kzu-4i-tB0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KAa-eQ-LgD"/>
+                            <constraint firstItem="GJG-3J-IOX" firstAttribute="top" secondItem="Kzu-4i-tB0" secondAttribute="bottom" constant="32" id="ggI-OW-3oO"/>
                             <constraint firstItem="Kzu-4i-tB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kxH-Db-lYK"/>
+                            <constraint firstItem="GJG-3J-IOX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wIj-k9-pto"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Kzu-4i-tB0"/>
+                                <exclude reference="GJG-3J-IOX"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="KAa-eQ-LgD"/>
                                 <exclude reference="kxH-Db-lYK"/>
+                                <exclude reference="ggI-OW-3oO"/>
+                                <exclude reference="wIj-k9-pto"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="Kzu-4i-tB0"/>
+                                <include reference="GJG-3J-IOX"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="KAa-eQ-LgD"/>
                                 <include reference="kxH-Db-lYK"/>
+                                <include reference="ggI-OW-3oO"/>
+                                <include reference="wIj-k9-pto"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="GJG-3J-IOX" id="ic4-86-Oub"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
