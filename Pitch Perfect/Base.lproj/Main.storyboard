@@ -53,12 +53,12 @@
                                 <exclude reference="Fxe-9g-o9C"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="DA8-8X-rFn"/>
+                                <exclude reference="YaE-US-8ou"/>
                                 <exclude reference="KAa-eQ-LgD"/>
                                 <exclude reference="kxH-Db-lYK"/>
                                 <exclude reference="ggI-OW-3oO"/>
                                 <exclude reference="wIj-k9-pto"/>
-                                <exclude reference="DA8-8X-rFn"/>
-                                <exclude reference="YaE-US-8ou"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -68,17 +68,19 @@
                                 <include reference="Fxe-9g-o9C"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="DA8-8X-rFn"/>
+                                <include reference="YaE-US-8ou"/>
                                 <include reference="KAa-eQ-LgD"/>
                                 <include reference="kxH-Db-lYK"/>
                                 <include reference="ggI-OW-3oO"/>
                                 <include reference="wIj-k9-pto"/>
-                                <include reference="DA8-8X-rFn"/>
-                                <include reference="YaE-US-8ou"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="Kzu-4i-tB0" id="evz-MZ-Vcg"/>
                         <outlet property="recordingInProgress" destination="GJG-3J-IOX" id="ic4-86-Oub"/>
+                        <outlet property="stopButton" destination="Fxe-9g-o9C" id="aqH-tn-aDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
