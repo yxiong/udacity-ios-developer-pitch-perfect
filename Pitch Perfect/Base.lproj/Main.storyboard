@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z5q-y8-iZl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -89,22 +90,57 @@
             </objects>
             <point key="canvasLocation" x="1042" y="245.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="0xn-nw-a6E">
             <objects>
-                <viewController id="POo-8D-JbT" sceneMemberID="viewController">
+                <viewController id="POo-8D-JbT" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rvo-4O-hOE"/>
                         <viewControllerLayoutGuide type="bottom" id="qbK-RG-kqT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JTJ-D2-HzM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="405" affinity="minY"/>
+                        </userGuides>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-2M-SQd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="snail"/>
+                                <connections>
+                                    <action selector="playSlowAudio:" destination="POo-8D-JbT" eventType="touchUpInside" id="GmL-p7-3qw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lfF-2M-SQd" firstAttribute="top" secondItem="rvo-4O-hOE" secondAttribute="bottom" constant="150" id="Cly-Em-YsR"/>
+                            <constraint firstItem="lfF-2M-SQd" firstAttribute="leading" secondItem="JTJ-D2-HzM" secondAttribute="leadingMargin" constant="100" id="PtE-B4-bdV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lfF-2M-SQd"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Cly-Em-YsR"/>
+                                <exclude reference="PtE-B4-bdV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="lfF-2M-SQd"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Cly-Em-YsR"/>
+                                <include reference="PtE-B4-bdV"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgs-Jk-bS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="1010.25"/>
+            <point key="canvasLocation" x="1042" y="956.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6UL-dO-4ny">
@@ -127,6 +163,7 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="snail" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
     </resources>
 </document>
