@@ -120,36 +120,51 @@
                                     <action selector="playFastAudio:" destination="POo-8D-JbT" eventType="touchUpInside" id="OP0-i1-bGD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFD-5T-gzh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopPlayingAudio:" destination="POo-8D-JbT" eventType="touchUpInside" id="b8m-pe-e31"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="UgB-dI-dIO" secondAttribute="trailing" constant="50" id="1c0-VQ-Olb"/>
+                            <constraint firstItem="qbK-RG-kqT" firstAttribute="top" secondItem="MFD-5T-gzh" secondAttribute="bottom" constant="75" id="4Lk-Y4-1gy"/>
                             <constraint firstItem="lfF-2M-SQd" firstAttribute="top" secondItem="rvo-4O-hOE" secondAttribute="bottom" constant="150" id="Cly-Em-YsR"/>
                             <constraint firstItem="lfF-2M-SQd" firstAttribute="leading" secondItem="JTJ-D2-HzM" secondAttribute="leadingMargin" constant="50" id="PtE-B4-bdV"/>
                             <constraint firstItem="UgB-dI-dIO" firstAttribute="top" secondItem="rvo-4O-hOE" secondAttribute="bottom" constant="150" id="TpQ-ut-R46"/>
+                            <constraint firstItem="MFD-5T-gzh" firstAttribute="centerX" secondItem="JTJ-D2-HzM" secondAttribute="centerX" id="wro-nB-JSy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="lfF-2M-SQd"/>
                                 <exclude reference="UgB-dI-dIO"/>
+                                <exclude reference="MFD-5T-gzh"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1c0-VQ-Olb"/>
-                                <exclude reference="TpQ-ut-R46"/>
                                 <exclude reference="Cly-Em-YsR"/>
                                 <exclude reference="PtE-B4-bdV"/>
+                                <exclude reference="1c0-VQ-Olb"/>
+                                <exclude reference="TpQ-ut-R46"/>
+                                <exclude reference="wro-nB-JSy"/>
+                                <exclude reference="4Lk-Y4-1gy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="lfF-2M-SQd"/>
                                 <include reference="UgB-dI-dIO"/>
+                                <include reference="MFD-5T-gzh"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1c0-VQ-Olb"/>
-                                <include reference="TpQ-ut-R46"/>
                                 <include reference="Cly-Em-YsR"/>
                                 <include reference="PtE-B4-bdV"/>
+                                <include reference="1c0-VQ-Olb"/>
+                                <include reference="TpQ-ut-R46"/>
+                                <include reference="wro-nB-JSy"/>
+                                <include reference="4Lk-Y4-1gy"/>
                             </mask>
                         </variation>
                     </view>
