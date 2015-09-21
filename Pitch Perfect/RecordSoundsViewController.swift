@@ -63,6 +63,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         } else {
             print("Recording was not successful")
             recordButton.enabled = true
+            infoLabel.text = "Recording failed, tap to record again"
             stopButton.hidden = true
         }
     }
