@@ -24,11 +24,6 @@ class PlaySoundsViewController: UIViewController {
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func playSlowAudio(sender: UIButton) {
         playAudioWithVariableSpeed(0.5)
@@ -39,8 +34,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioWithVariableSpeed(speed: Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
+        stopPlayingAudio()
         audioPlayer.currentTime = 0.0
         audioPlayer.rate = speed
         audioPlayer.play()
@@ -55,8 +49,7 @@ class PlaySoundsViewController: UIViewController {
     }
 
     func playAudioWithVariablePitch(pitch: Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
+        stopPlayingAudio()
         audioEngine.reset()
         
         let audioPlayerNode = AVAudioPlayerNode()
@@ -75,16 +68,11 @@ class PlaySoundsViewController: UIViewController {
     }
 
     @IBAction func stopPlayingAudio(sender: UIButton) {
+        stopPlayingAudio()
+    }
+    
+    func stopPlayingAudio() {
         audioPlayer.stop()
+        audioEngine.stop()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
