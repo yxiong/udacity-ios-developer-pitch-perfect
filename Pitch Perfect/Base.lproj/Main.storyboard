@@ -36,7 +36,6 @@
                                 <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VD5-ci-A9X"/>
-                                    <segue destination="POo-8D-JbT" kind="show" id="qrH-EG-q6a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -85,11 +84,12 @@
                         <outlet property="recordButton" destination="Kzu-4i-tB0" id="evz-MZ-Vcg"/>
                         <outlet property="recordingInProgress" destination="GJG-3J-IOX" id="ic4-86-Oub"/>
                         <outlet property="stopButton" destination="Fxe-9g-o9C" id="aqH-tn-aDv"/>
+                        <segue destination="POo-8D-JbT" kind="show" identifier="stopRecording" id="cnk-6P-ta4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="245.25"/>
+            <point key="canvasLocation" x="1018" y="890.25"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="0xn-nw-a6E">
@@ -109,6 +109,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-2M-SQd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="snail"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="70" y="214" width="100" height="100"/>
+                                </variation>
                                 <connections>
                                     <action selector="playSlowAudio:" destination="POo-8D-JbT" eventType="touchUpInside" id="GmL-p7-3qw"/>
                                 </connections>
@@ -116,6 +119,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgB-dI-dIO">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="rabbit"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="430" y="214" width="100" height="100"/>
+                                </variation>
                                 <connections>
                                     <action selector="playFastAudio:" destination="POo-8D-JbT" eventType="touchUpInside" id="OP0-i1-bGD"/>
                                 </connections>
@@ -171,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgs-Jk-bS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="956.25"/>
+            <point key="canvasLocation" x="1770" y="890.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6UL-dO-4ny">
