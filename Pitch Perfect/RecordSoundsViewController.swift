@@ -12,32 +12,21 @@ import UIKit
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var tapToRecord: UILabel!
-    @IBOutlet weak var recordingInProgress: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
 
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewWillAppear(animated: Bool) {
         recordButton.enabled = true
+        infoLabel.text = "Tap to record"
         stopButton.hidden = true
     }
 
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
-        tapToRecord.hidden = true
-        recordingInProgress.hidden = false
+        infoLabel.text = "Recording ..."
         stopButton.hidden = false
 
         // Get a file path for recorded voice
@@ -59,9 +48,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(sender: UIButton) {
-        tapToRecord.hidden = false
-        recordingInProgress.hidden = true
-
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)

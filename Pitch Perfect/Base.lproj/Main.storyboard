@@ -25,12 +25,6 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccg-gU-Tj1"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJG-3J-IOX">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxe-9g-o9C">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop"/>
@@ -38,67 +32,58 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VD5-ci-A9X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uR-Xk-84v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2n-Um-5Pk">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="y2n-Um-5Pk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6hE-WA-7ns"/>
                             <constraint firstItem="Kzu-4i-tB0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KAa-eQ-LgD"/>
-                            <constraint firstItem="2uR-Xk-84v" firstAttribute="top" secondItem="Kzu-4i-tB0" secondAttribute="bottom" constant="32" id="XfQ-m7-iQb"/>
                             <constraint firstItem="Fxe-9g-o9C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YaE-US-8ou"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fxe-9g-o9C" secondAttribute="bottom" constant="75" id="duk-Xp-fTK"/>
-                            <constraint firstItem="GJG-3J-IOX" firstAttribute="top" secondItem="Kzu-4i-tB0" secondAttribute="bottom" constant="32" id="ggI-OW-3oO"/>
+                            <constraint firstItem="y2n-Um-5Pk" firstAttribute="top" secondItem="Kzu-4i-tB0" secondAttribute="bottom" constant="32" id="epy-85-ar2"/>
                             <constraint firstItem="Kzu-4i-tB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kxH-Db-lYK"/>
-                            <constraint firstItem="2uR-Xk-84v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQB-Ty-Ad2"/>
-                            <constraint firstItem="GJG-3J-IOX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wIj-k9-pto"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Kzu-4i-tB0"/>
-                                <exclude reference="GJG-3J-IOX"/>
                                 <exclude reference="Fxe-9g-o9C"/>
-                                <exclude reference="2uR-Xk-84v"/>
+                                <exclude reference="y2n-Um-5Pk"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="duk-Xp-fTK"/>
-                                <exclude reference="YaE-US-8ou"/>
                                 <exclude reference="KAa-eQ-LgD"/>
                                 <exclude reference="kxH-Db-lYK"/>
-                                <exclude reference="XfQ-m7-iQb"/>
-                                <exclude reference="lQB-Ty-Ad2"/>
-                                <exclude reference="ggI-OW-3oO"/>
-                                <exclude reference="wIj-k9-pto"/>
+                                <exclude reference="6hE-WA-7ns"/>
+                                <exclude reference="epy-85-ar2"/>
+                                <exclude reference="YaE-US-8ou"/>
+                                <exclude reference="duk-Xp-fTK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="Kzu-4i-tB0"/>
-                                <include reference="GJG-3J-IOX"/>
                                 <include reference="Fxe-9g-o9C"/>
-                                <include reference="2uR-Xk-84v"/>
+                                <include reference="y2n-Um-5Pk"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="duk-Xp-fTK"/>
-                                <include reference="YaE-US-8ou"/>
                                 <include reference="KAa-eQ-LgD"/>
                                 <include reference="kxH-Db-lYK"/>
-                                <include reference="XfQ-m7-iQb"/>
-                                <include reference="lQB-Ty-Ad2"/>
-                                <include reference="ggI-OW-3oO"/>
-                                <include reference="wIj-k9-pto"/>
+                                <include reference="6hE-WA-7ns"/>
+                                <include reference="epy-85-ar2"/>
+                                <include reference="YaE-US-8ou"/>
+                                <include reference="duk-Xp-fTK"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="aLg-Cd-3CF"/>
                     <connections>
+                        <outlet property="infoLabel" destination="y2n-Um-5Pk" id="b7m-4Q-fJ8"/>
                         <outlet property="recordButton" destination="Kzu-4i-tB0" id="evz-MZ-Vcg"/>
-                        <outlet property="recordingInProgress" destination="GJG-3J-IOX" id="ic4-86-Oub"/>
                         <outlet property="stopButton" destination="Fxe-9g-o9C" id="aqH-tn-aDv"/>
-                        <outlet property="tapToRecord" destination="2uR-Xk-84v" id="ogf-vB-5xp"/>
                         <segue destination="POo-8D-JbT" kind="show" identifier="stopRecording" id="cnk-6P-ta4"/>
                     </connections>
                 </viewController>
