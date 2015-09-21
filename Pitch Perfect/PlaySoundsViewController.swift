@@ -11,18 +11,14 @@ import UIKit
 
 class PlaySoundsViewController: UIViewController {
 
-    var audioPlayer:AVAudioPlayer!
+    var audioPlayer: AVAudioPlayer!
+    var receivedAudio: RecordedAudio!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-            let filePathUrl = NSURL.fileURLWithPath(filePath)
-            audioPlayer = try! AVAudioPlayer(contentsOfURL: filePathUrl)
-            audioPlayer.enableRate = true
-        } else {
-            print("The filePath is empty")
-        }
+        audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+        audioPlayer.enableRate = true
     }
 
     override func didReceiveMemoryWarning() {
