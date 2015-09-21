@@ -9,7 +9,7 @@
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -144,12 +144,12 @@
                                 <exclude reference="MFD-5T-gzh"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Cly-Em-YsR"/>
-                                <exclude reference="PtE-B4-bdV"/>
+                                <exclude reference="4Lk-Y4-1gy"/>
+                                <exclude reference="wro-nB-JSy"/>
                                 <exclude reference="1c0-VQ-Olb"/>
                                 <exclude reference="TpQ-ut-R46"/>
-                                <exclude reference="wro-nB-JSy"/>
-                                <exclude reference="4Lk-Y4-1gy"/>
+                                <exclude reference="Cly-Em-YsR"/>
+                                <exclude reference="PtE-B4-bdV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -159,12 +159,12 @@
                                 <include reference="MFD-5T-gzh"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Cly-Em-YsR"/>
-                                <include reference="PtE-B4-bdV"/>
+                                <include reference="4Lk-Y4-1gy"/>
+                                <include reference="wro-nB-JSy"/>
                                 <include reference="1c0-VQ-Olb"/>
                                 <include reference="TpQ-ut-R46"/>
-                                <include reference="wro-nB-JSy"/>
-                                <include reference="4Lk-Y4-1gy"/>
+                                <include reference="Cly-Em-YsR"/>
+                                <include reference="PtE-B4-bdV"/>
                             </mask>
                         </variation>
                     </view>
