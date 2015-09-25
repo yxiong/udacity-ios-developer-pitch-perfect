@@ -18,6 +18,9 @@ class PlaySoundsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let session = AVAudioSession.sharedInstance()
+        try! session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
 
         audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         audioPlayer.enableRate = true
