@@ -1,7 +1,7 @@
 Pitch Perfect
 =============
 
-Udacity iOS developer Nanodegree project.
+Udacity iOS Developer Nanodegree project.
 
 
 Author: Ying Xiong.  
